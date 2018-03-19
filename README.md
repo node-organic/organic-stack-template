@@ -1,4 +1,4 @@
-# organic-stem-stack
+# organic-stack-template
 
 a stack upgrade template
 
@@ -7,5 +7,5 @@ a stack upgrade template
 ```
 $ mkdir ./my-stack-upgrade
 $ cd ./my-stack-upgarde
-$ npx organic-stem-stack
+$ npx organic-stack-template
 ```

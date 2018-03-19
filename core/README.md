@@ -5,7 +5,7 @@
 ## usage
 
 ```
-$ mkdir ./my-stack-upgrade
-$ cd ./my-stack-upgarde
+$ mkdir ./myProject
+$ cd ./myProject
 $ npx {{{stack-name}}}
 ```

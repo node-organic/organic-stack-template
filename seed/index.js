@@ -7,7 +7,7 @@ const exec = require('util').promisify(require('child_process').exec)
 const execute = async function ({destDir = process.cwd(), answers}) {
   let stack = new StackUpgrade({
     destDir: destDir,
-    name: 'organic-stack-template',
+    name: '{{{stack-name}}}',
     version: '1.0.0'
   })
   await stack.configureMergeAndUpdateJSON({

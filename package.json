@@ -30,5 +30,11 @@
   "bugs": {
     "url": "https://github.com/node-organic/organic-stack-template/issues"
   },
-  "homepage": "https://github.com/node-organic/organic-stack-template#readme"
+  "homepage": "https://github.com/node-organic/organic-stack-template#readme",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/seed/"
+    ]
+  }
 }

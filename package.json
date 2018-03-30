@@ -5,7 +5,7 @@
     "organic-stack-template": "./index.js"
   },
   "dependencies": {
-    "organic-stack-upgrade": "1.0.0"
+    "organic-stack-upgrade": "1.0.1"
   },
   "devDependencies": {
     "eslint": "^4.18.2",

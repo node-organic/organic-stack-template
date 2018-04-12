@@ -2,7 +2,6 @@
 
 const StackUpgrade = require('organic-stack-upgrade')
 const path = require('path')
-const exec = require('util').promisify(require('child_process').exec)
 
 const execute = async function ({destDir = process.cwd(), answers} = {}) {
   let stack = new StackUpgrade({
@@ -15,9 +14,7 @@ const execute = async function ({destDir = process.cwd(), answers} = {}) {
     answers
   })
   console.info('run npm install...')
-  let npmOutput = await exec('npm install')
-  console.info(npmOutput.stdout)
-  console.error(npmOutput.stderr)
+  await stack.exec('npm install')
 }
 
 if (module.parent) {

@@ -7,5 +7,5 @@ a stack upgrade template
 ```
 $ mkdir ./my-stack-upgrade
 $ cd ./my-stack-upgarde
-$ npx organic-stack-template
+$ npx node-organic/organic-stack-template
 ```

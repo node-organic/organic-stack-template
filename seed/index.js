@@ -6,13 +6,17 @@ const path = require('path')
 const execute = async function ({destDir = process.cwd(), answers} = {}) {
   let stack = new StackUpgrade({
     destDir: destDir,
-    name: '{{{stack-name}}}',
-    version: '1.0.0'
+    packagejson: path.join(__dirname, '/package.json')
   })
-  await stack.configureMergeAndUpdateJSON({
+  await stack.configure({
     sourceDir: path.join(__dirname, 'seed'),
     answers
   })
+  await stack.merge({
+    sourceDir: path.join(__dirname, 'seed'),
+    answers
+  })
+  await stack.updateJSON()
   console.info('run npm install...')
   await stack.exec('npm install')
 }

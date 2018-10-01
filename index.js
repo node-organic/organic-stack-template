@@ -9,7 +9,7 @@ const execute = async function ({destDir = process.cwd(), answers} = {}) {
     packagejson: path.join(__dirname, '/package.json')
   })
   await stack.configure({
-    sourceDir: path.join(__dirname, 'seed'),
+    sourceDirs: [path.join(__dirname, 'seed')],
     answers
   })
   await stack.merge({

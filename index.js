@@ -8,13 +8,13 @@ const execute = async function ({destDir = process.cwd(), answers} = {}) {
     destDir: destDir,
     packagejson: path.join(__dirname, '/package.json')
   })
-  await stack.configure({
+  let resulted_answers = await stack.configure({
     sourceDirs: [path.join(__dirname, 'seed')],
     answers
   })
   await stack.merge({
     sourceDir: path.join(__dirname, 'seed'),
-    answers
+    answers: resulted_answers
   })
   await stack.updateJSON()
   console.info('run npm install...')
